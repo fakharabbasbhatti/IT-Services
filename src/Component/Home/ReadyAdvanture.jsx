@@ -4,7 +4,7 @@ import { FaArrowRight } from "react-icons/fa";
 const ReadyAdvanture = () => {
     return (
         <>
-            <section className=" relative bg-[#0c1c26] md:pt-10">
+            <section className=" relative bg-[#a17d29] md:pt-10">
                 <div className="relative z-20 max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-12 py-26 max-md:pt-15 h-[100%] lg:py-28 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
                     {/* Text Section */}
                     <div className="text-white max-w-xl text-left">
@@ -15,7 +15,7 @@ const ReadyAdvanture = () => {
                             Let us help you create the perfect journey. Our travel experts are
                             ready to craft your dream vacation.
                         </p>
-                        <button className="text-[#0c1c26] bg-[#a17d29] border border-[#a17d29] transition duration-500 ease-in-out font-medium px-6 py-3.5 text-xl rounded-md flex items-center gap-2 hover:text-white hover:bg-[#0c1c26] cursor-pointer">
+                        <button className=" text- bg- border-2  transition duration-500 ease-in-out font-medium px-6 py-3.5 text-xl rounded-md flex items-center gap-2 hover:text-white hover:border-[#0c1c26] hover:bg-[#0c1c26] cursor-pointer">
                             Start Planning <FaArrowRight />
                         </button>
 

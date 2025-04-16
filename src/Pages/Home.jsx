@@ -4,6 +4,7 @@ import HandpickedPackeg from '../Component/Home/HandpickedPackeg'
 import YourJourney from '../Component/Home/YourJourney'
 import TopReviews from '../Component/Home/TopReviews'
 import ReadyAdvanture from '../Component/Home/ReadyAdvanture'
+import ItPopular from '../Component/Home/ItPopular'
 
 const Home = () => {
   return (
@@ -11,6 +12,7 @@ const Home = () => {
       <Hero />
       <HandpickedPackeg />
       <YourJourney />
+      <ItPopular/>
       <TopReviews />
       <ReadyAdvanture />
     </div>
