@@ -3,7 +3,7 @@ import { FaQuoteRight } from "react-icons/fa";
 
 const TopReviews = () => {
   return (
-    <section className="bg-[#fdfdfa]  py-16 px-4 text-center">
+    <section className="bg-gray-100 py-16 px-4 text-center">
       <div className="max-w-3xl mx-auto">
         {/* Badge */}
         <div className="inline-block bg-[#FFE5DA] text-[#FF4E00] px-6 py-2 rounded-full text-sm font-semibold mb-4">
