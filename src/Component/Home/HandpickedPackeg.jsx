@@ -27,11 +27,11 @@ const packages = [
 const HandpickedPackeg = () => {
   return (
     <div className="py-16 bg-white text-center">
-      <p className="text-sm text-[#Fb5607] bg-[#FFECE1] rounded-full font-light uppercase inline-block px-8 py-2 mb-2">
+      <p className="text-sm text-[#fff] bg-[#a17d29] hover:bg-[#0c1c26] cursor-pointer rounded-full font-light uppercase inline-block px-8 py-2 mb-2">
         Popular Destinations
       </p>
       <h2 className="text-3xl md:text-5xl font-bold mb-10">
-        Handpicked Packages
+      Tailored IT Solutions
       </h2>
       <div className="flex flex-wrap justify-center gap-8 px-4">
         {packages.map((item, index) => (
