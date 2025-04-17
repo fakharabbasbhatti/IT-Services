@@ -12,6 +12,7 @@ import Team from './Pages/Team';
 import Blog from "./Pages/Blog";
 import Projects from "./Pages/Projects";
 import PageNotFound from './Component/PageNotFound';
+import BlogDetail from './Component/Blog/BlogDetail';
 
 
 const MainLayout = () => (
@@ -32,6 +33,7 @@ const router = createBrowserRouter([
       { path: "/services/:id", element: <ServiceDetail /> },
       { path: "/contact", element: <Contact /> },
       { path: "/blogs", element: <Blog /> },
+      { path: "/blogs/:id", element: <BlogDetail /> },
       { path: "/projects", element: <Projects /> },
       { path: "/team", element: <Team /> }
     ],

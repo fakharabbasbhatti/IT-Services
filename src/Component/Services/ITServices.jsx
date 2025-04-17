@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import "./ITServices.css";
 
 const services = [
     {
@@ -77,13 +78,13 @@ const cardVariants = {
 const ITServices = () => {
     return (
         <motion.div
-            className="max-w-7xl mx-auto px-4 py-16"
+            className="max-w-full mx-auto px-4 py-16 bg-[#0c1c26]"
             initial="hidden"
             animate="show"
             variants={containerVariants}
         >
             <motion.h2
-                className="text-4xl font-bold text-center mb-6 text-[#0c1c26]"
+                className="text-4xl font-bold text-center mb-6 text-[#a17d29]"
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -92,7 +93,7 @@ const ITServices = () => {
             </motion.h2>
 
             <motion.p
-                className="text-center text-lg text-gray-600 mb-12 max-w-2xl mx-auto"
+                className="text-center text-lg text-white mb-12 max-w-2xl mx-auto"
                 initial={{ opacity: 0, y: -20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.6 }}
@@ -107,13 +108,13 @@ const ITServices = () => {
                 {services.map((service, index) => (
                     <motion.div
                         key={index}
-                        className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                        className="bg-white/90 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
                         variants={cardVariants}
                         whileInView="show"
                         viewport={{ once: true, amount: 0.2 }}
                         initial="hidden"
                     >
-                        <div className="h-56 overflow-hidden">
+                        <div className="h-56 overflow-hidden shine-effect">
                             <img
                                 src={service.image}
                                 alt={service.title}

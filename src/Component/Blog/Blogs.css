@@ -1,0 +1,25 @@
+.shine-effect {
+    position: relative;
+    overflow: hidden;
+}
+
+.shine-effect::before {
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -45%;
+    width: 60%;
+    height: 300%;
+    background: linear-gradient(120deg,
+            rgba(255, 255, 255, 0) 30%,
+            rgba(255, 255, 255, 0.5) 50%,
+            rgba(255, 255, 255, 0) 70%);
+    transform: rotate(25deg);
+    transition: all 0.6s ease-in-out;
+    z-index: 2;
+}
+
+.shine-effect:hover::before {
+    top: 100%;
+    left: 100%;
+}
