@@ -65,7 +65,7 @@ const Navbar = () => {
               {["Home", "Team", "Projects", "Services", "Blogs", "About", "Contact"].map((item, index) => (
                 <li key={index}>
                   <Link
-                    to={`/${item.toLowerCase()}`}
+                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
                     className="nav-underline  text-[#0c1c26] hover:text-[#a17d29] transition py-2 px-3"
                   >
                     {item}
