@@ -1,112 +1,65 @@
 import React from "react";
 
+const cardData = [
+  { title: "Web Development", image: "/Home/web.avif" },
+  { title: "Content Writing", image: "/Home/contentW.avif" },
+  { title: "Graphics Designing", image: "/Home/graphics.webp" },
+  { title: "Shopify Store", image: "/Home/shopify.avif" },
+  { title: "Amazon Store", image: "/Home/amazon.avif" },
+  { title: "Video Editing", image: "/Home/videoEd.webp" },
+  { title: "Game Development", image: "/Home/Game.avif" },
+  { title: "Content Specialist", image: "/Home/contentSp.webp" },
+];
+
 const ItPopular = () => {
   return (
-    <div className="w-full p-10 min-h-screen flex flex-col gap-10 text-white bg-[#0c1c26] py-15">
-      {/* First Row */}
+    <div className="w-full p-10 max-md:px-1 min-h-screen flex flex-col gap-10 text-white bg-[#0c1c26] py-15 mx-md:pt-30">
+      {/* Header Section */}
       <div className="flex flex-col lg:flex-row gap-10">
         <div className="flex flex-col gap-4 p-5 lg:w-1/2">
-          <h3 className="px-4 py-1 text-[#a17d29] bg-orange-100 rounded-full w-fit font-medium">
+          <h3 className="text-sm text-[#fff] bg-[#a17d29] w-fit border-2 border-[#0c1c26] hover:border-[#a17d29] hover:bg-[#0c1c26] cursor-pointer duration-500 rounded-full font-light uppercase inline-block px-8 py-2 mb-2">
             Choose Your Place
           </h3>
-          <h1 className="text-5xl font-bold">Popular Destinations</h1>
+          <h1 className="text-5xl font-bold">Top IT Solutions</h1>
           <p className="text-lg">
-            Join us as we explore the wonders of the globe, one incredible
-            journey at a time.
+            Join us as we transform businesses through innovative technology, one solution at a time.
           </p>
-          <button className="px-7 py-3 bg-[#0c1c26] border-[#a17d29] bg- w-fit border-2  transition duration-500 ease-in-out font-medium text-xl rounded-md flex items-center gap-2 hover:text-white hover:border-white hover:bg-[#0c1c26] hover:text- cursor-pointer">
-            Find Packages
+          <button className="relative overflow-hidden group px-7 py-3 w-fit border-2 border-[#a17d29] cursor-pointer font-medium text-xl rounded-md flex items-center gap-2 text-white transition duration-500 ease-in-out">
+            <span className="relative z-10 group-hover:text-[#0c1c26] transition duration-300">Find Packages</span>
+            <span className="absolute inset-0 w-0 group-hover:w-full bg-[#a17d29] transition-all duration-500 ease-in-out"></span>
           </button>
+
         </div>
 
+        {/* First 2 cards */}
         <div className="flex gap-6 lg:w-1/2">
-          <div className="relative w-1/2 h-72 rounded-3xl overflow-hidden">
-            <img
-              className="w-full h-full object-cover"
-              src="/Home/web.avif"
-              alt="London"
-            />
-            <p className="absolute bottom-4 left-4 text-white text-xl font-semibold drop-shadow">
-              Web Development
-            </p>
-          </div>
-          <div className="relative w-1/2 h-72 rounded-3xl overflow-hidden">
-            <img
-              className="w-full h-full object-cover"
-              src="/Home/contentW.avif"
-              alt="London"
-            />
-            <p className="absolute bottom-4 left-4 text-white text-xl font-semibold drop-shadow">
-              Content Writing
-            </p>
-          </div>
+          {cardData.slice(0, 2).map((card, index) => (
+            <Card key={index} title={card.title} image={card.image} />
+          ))}
         </div>
       </div>
 
-      {/* Second Row */}
-      <div className="flex flex-col lg:flex-row gap-6">
-        <div className="relative w-full lg:w-1/3 h-64 rounded-3xl overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
-            src="/Home/graphics.webp"
-            alt="London"
-          />
-          <p className="absolute bottom-4 left-4 text-white text-xl font-semibold drop-shadow">
-            Graphics Designing
-          </p>
-        </div>
-        <div className="relative w-full lg:w-1/3 h-64 rounded-3xl overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
-            src="/Home/shopify.avif"
-            alt="Europe"
-          />
-          <p className="absolute bottom-4 left-4 text-white text-xl font-semibold drop-shadow">
-            Shopify Store
-          </p>
-        </div>
-        <div className="relative w-full lg:w-1/3 h-64 rounded-3xl overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
-            src="/Home/amazon.avif"
-            alt="Africa"
-          />
-          <p className="absolute bottom-4 left-4 text-white text-xl font-semibold drop-shadow">
-            Amazon Store
-          </p>
-        </div>
+      {/* Remaining cards in rows */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {cardData.slice(2).map((card, index) => (
+          <Card key={index} title={card.title} image={card.image} />
+        ))}
       </div>
-      <div className="flex flex-col lg:flex-row gap-6">
-        <div className="relative w-full lg:w-1/3 h-64 rounded-3xl overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
-            src="/Home/videoEd.webp"
-            alt="London"
-          />
-          <p className="absolute bottom-4 left-4 text-white text-xl font-semibold drop-shadow">
-            Video Editing
-          </p>
-        </div>
-        <div className="relative w-full lg:w-1/3 h-64 rounded-3xl overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
-            src="/Home/Game.avif"
-            alt="Europe"
-          />
-          <p className="absolute bottom-4 left-4 text-white text-xl font-semibold drop-shadow">
-            Game Development
-          </p>
-        </div>
-        <div className="relative w-full lg:w-1/3 h-64 rounded-3xl overflow-hidden">
-          <img
-            className="w-full h-full object-cover"
-            src="/Home/contentSp.webp"
-            alt="Africa"
-          />
-          <p className="absolute bottom-4 left-4 text-white text-xl font-semibold drop-shadow">
-            Content Specialist
-          </p>
-        </div>
+    </div>
+  );
+};
+
+const Card = ({ title, image }) => {
+  return (
+    <div className="relative h-64 rounded-3xl overflow-hidden group">
+      <img className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" src={image} alt={title} />
+      <p className="absolute bottom-4 left-4 text-white text-xl font-semibold drop-shadow">
+        {title}
+      </p>
+
+      {/* Shine Effect */}
+      <div className="absolute inset-0 z-10 overflow-hidden rounded-3xl pointer-events-none">
+        <div className="absolute -left-1/2 top-0 w-1/2 h-full bg-white opacity-10 transform rotate-12 scale-y-125 transition-all duration-700 group-hover:translate-x-[250%]" />
       </div>
     </div>
   );
