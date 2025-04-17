@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import "./Blogs.css";
 
 const blogs = [
     {
@@ -47,13 +48,13 @@ const card = {
 const Blogs = () => {
     return (
         <motion.div
-            className="max-w-7xl mx-auto px-4 py-16"
+            className="w-full px-4 py-16 bg-[#0c1c26]"
             initial="hidden"
             animate="show"
             variants={container}
         >
             <motion.h2
-                className="text-4xl font-bold text-center mb-6 text-[#0c1c26]"
+                className="text-4xl font-bold text-center mb-6 text-[#a17d29]"
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -61,7 +62,7 @@ const Blogs = () => {
                 Latest Blogs
             </motion.h2>
             <motion.p
-                className="text-center text-lg text-gray-600 mb-12 max-w-2xl mx-auto"
+                className="text-center text-lg text-[#fff] mb-12 max-w-2xl mx-auto"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
@@ -76,15 +77,18 @@ const Blogs = () => {
                 {blogs.map((blog) => (
                     <motion.div
                         key={blog.id}
-                        className="bg-white rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden border border-[#a17d29]"
+                        className="bg-white/90 rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden border border-[#a17d29]"
                         variants={card}
                     >
-                        <img
-                            src={blog.image}
-                            alt={blog.title}
-                            className="w-full h-56 object-cover transition-transform duration-300 hover:scale-105 p-2 rounded-2xl"
-                        />
-                        <div className="p-6">
+                        <div className="shine-effect">
+                            <img
+                                src={blog.image}
+                                alt={blog.title}
+                                className="w-full h-56 object-cover transition-transform duration-300 hover:scale-105 p-2 rounded-2xl"
+                            />
+
+                        </div>
+                        <div className="p-4">
                             <h3 className="text-2xl font-semibold text-[#0c1c26] mb-2">
                                 {blog.title.length > 40 ? `${blog.title.substring(0, 40)}...` : blog.title}
                             </h3>

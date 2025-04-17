@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const Hero = () => {
     return (
-        <div className="relative h-[100vh] max-h-[600px] flex justify-center items-center">
+        <div className="relative md:h-[80vh] h-full flex justify-center items-center">
             <img
-                src="/Blogs/bg.jpg"
+                src="/Blogs/blog-bg.png"
                 alt="Visa Consultancy & Travel Solutions"
                 className="w-full h-full "
                 loading="lazy"
