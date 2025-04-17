@@ -108,7 +108,7 @@ const ITServices = () => {
                 {services.map((service, index) => (
                     <motion.div
                         key={index}
-                        className="bg-white/90 rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition duration-300"
+                        className="bg-[#142c38] rounded-2xl shadow-md overflow-hidden hover:shadow-xl shadow-[#a17b29] transition duration-300 border border-[#a17d29]"
                         variants={cardVariants}
                         whileInView="show"
                         viewport={{ once: true, amount: 0.2 }}
@@ -127,10 +127,10 @@ const ITServices = () => {
                         </div>
 
                         <div className="p-6">
-                            <h3 className="text-2xl font-semibold text-[#0c1c26] mb-2">
+                            <h3 className="text-2xl font-semibold text-[#a17d29] mb-2">
                                 {service.title}
                             </h3>
-                            <p className="text-gray-600 mb-4">{service.description}</p>
+                            <p className="text-white mb-4">{service.description}</p>
                             <Link to={`/services/${service.id}`}>
                                 <button className="relative overflow-hidden group cursor-pointer flex items-center gap-2 bg-[#a17d29] text-white px-6 py-3 font-semibold text-lg shadow-md rounded-md transform-gpu">
                                     <span className="relative z-10 flex items-center gap-2 bg-transparent">

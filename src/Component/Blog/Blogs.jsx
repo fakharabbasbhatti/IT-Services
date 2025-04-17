@@ -77,7 +77,7 @@ const Blogs = () => {
                 {blogs.map((blog) => (
                     <motion.div
                         key={blog.id}
-                        className="bg-white/90 rounded-2xl shadow-md hover:shadow-xl transition duration-300 overflow-hidden border border-[#a17d29]"
+                        className="bg-[#142c38] rounded-2xl shadow-md hover:shadow-xl shadow-[#a17b29] transition duration-300 overflow-hidden border border-[#a17d29]"
                         variants={card}
                     >
                         <div className="shine-effect">
@@ -89,11 +89,11 @@ const Blogs = () => {
 
                         </div>
                         <div className="p-4">
-                            <h3 className="text-2xl font-semibold text-[#0c1c26] mb-2">
+                            <h3 className="text-2xl font-semibold text-[#a17d29] mb-2">
                                 {blog.title.length > 40 ? `${blog.title.substring(0, 40)}...` : blog.title}
                             </h3>
-                            <p className="text-gray-600 text-sm mb-3">By {blog.author} • {blog.date}</p>
-                            <p className="text-gray-700 mb-4">
+                            <p className="text-white text-sm mb-3">By {blog.author} • {blog.date}</p>
+                            <p className="text-white mb-4">
                                 {blog.summary.length > 100 ? `${blog.summary.substring(0, 100)}...` : blog.summary}
                             </p>
                             <Link to={`/blogs/${blog.id}`}>
