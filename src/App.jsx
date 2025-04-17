@@ -6,6 +6,7 @@ import Footer from './Component/Footer'
 import Home from './Pages/Home'
 import About from './Pages/About'
 import Services from './Pages/Services'
+import ServiceDetail from "./Component/Services/ServiceDetail"
 import Contact from './Pages/Contact'
 import Team from './Pages/Team';
 import Blog from "./Pages/Blog";
@@ -28,6 +29,7 @@ const router = createBrowserRouter([
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
       { path: "/services", element: <Services /> },
+      { path: "/services/:id", element: <ServiceDetail /> },
       { path: "/contact", element: <Contact /> },
       { path: "/blogs", element: <Blog /> },
       { path: "/projects", element: <Projects /> },
