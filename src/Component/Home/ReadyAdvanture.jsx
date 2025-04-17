@@ -9,15 +9,15 @@ const ReadyAdvanture = () => {
                     {/* Text Section */}
                     <div className="text-white max-w-xl text-left">
                         <h2 className="text-4xl sm:text-5xl font-bold leading-tight mb-6">
-                            Ready to Start Your <br /> Adventure?
+                            Ready to Elevate Your <br /> Business with IT
                         </h2>
                         <p className="text-lg mb-8">
-                            Let us help you create the perfect journey. Our travel experts are
-                            ready to craft your dream vacation.
+                            Let us help you create the perfect system. Our IT specialists are here to develop solutions tailored to your business goals.
                         </p>
                         <button className=" text- bg- border-2  transition duration-500 ease-in-out font-medium px-6 py-3.5 text-xl rounded-md flex items-center gap-2 hover:text-white hover:border-[#0c1c26] hover:bg-[#0c1c26] cursor-pointer">
                             Start Planning <FaArrowRight />
                         </button>
+
 
                     </div>
 

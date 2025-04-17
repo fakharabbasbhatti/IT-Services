@@ -6,9 +6,10 @@ const TopReviews = () => {
     <section className="bg-gray-100 py-16 px-4 text-center">
       <div className="max-w-3xl mx-auto">
         {/* Badge */}
-        <div className="inline-block bg-[#FFE5DA] text-[#FF4E00] px-6 py-2 rounded-full text-sm font-semibold mb-4">
-          TESTIMONIALS
-        </div>
+        <p className="relative overflow-hidden group text-sm text-white cursor-pointer font-light uppercase inline-block px-8 py-2 mb-2 rounded-full bg-[#a17d29] transition-all duration-500 ease-in-out transform hover:scale-105 shadow-md">
+        <span className="relative z-10">TESTIMONIALS</span>
+        <span className="absolute inset-0 bg-gradient-to-r from-[#0c1c26] via-[#1a1a1a] to-[#0c1c26] w-0 group-hover:w-full transition-all duration-500 ease-in-out rounded-full"></span>
+      </p>
 
         {/* Title */}
         <h2 className="text-4xl md:text-5xl font-bold mb-8">Top Reviews</h2>

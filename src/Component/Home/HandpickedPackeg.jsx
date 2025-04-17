@@ -1,4 +1,4 @@
- 
+
 
 
 
@@ -7,31 +7,33 @@ import { FaHeart, FaMapMarkerAlt } from "react-icons/fa";
 
 // Sample data
 const packages = [
-    {
-        country: "Spain",
-        price: "From $2.9k",
-        image: "/Home/p1.jpeg", // replace with your actual path
-    },
-    {
-        country: "Australia",
-        price: "From $3.1k",
-        image: "/Home/p2.webp",
-    },
-    {
-        country: "England",
-        price: "From $2.5k",
-        image: "/Home/p3.webp",
-    },
+  {
+    country: "Spain",
+    price: "From $2.9k",
+    image: "/Home/p1.jpeg", // replace with your actual path
+  },
+  {
+    country: "Australia",
+    price: "From $3.1k",
+    image: "/Home/p2.webp",
+  },
+  {
+    country: "England",
+    price: "From $2.5k",
+    image: "/Home/p3.webp",
+  },
 ];
 
 const HandpickedPackeg = () => {
   return (
     <div className="py-16 bg-white text-center">
-      <p className="text-sm text-[#fff] bg-[#a17d29] hover:bg-[#0c1c26] cursor-pointer rounded-full font-light uppercase inline-block px-8 py-2 mb-2">
-        Popular Destinations
+      <p className="relative overflow-hidden group text-sm text-white cursor-pointer font-light uppercase inline-block px-8 py-2 mb-2 rounded-full bg-[#a17d29] transition-all duration-500 ease-in-out transform hover:scale-105 shadow-md">
+        <span className="relative z-10">Popular Destinations</span>
+        <span className="absolute inset-0 bg-gradient-to-r from-[#0c1c26] via-[#1a1a1a] to-[#0c1c26] w-0 group-hover:w-full transition-all duration-500 ease-in-out rounded-full"></span>
       </p>
+
       <h2 className="text-3xl md:text-5xl font-bold mb-10">
-      Tailored IT Solutions
+        Tailored IT Solutions
       </h2>
       <div className="flex flex-wrap justify-center gap-8 px-4">
         {packages.map((item, index) => (

@@ -10,20 +10,24 @@ const Footer = () => {
                     {/* Top Section: Logo & Grid */}
                     <div className="flex flex-col lg:flex-row justify-between gap-10">
                         {/* Logo and Description */}
-                        <div className="lg:max-w-sm">
-                            <h2 className="text-xl font-bold mb-2 flex items-center gap-2">
-                                <span className="text-2xl">🌍</span>
-                                ADVENTURE AURA
+                        <div className="lg:max-w-sm ">
+                            <h2 className="text-4xl font-bold mb-2 flex items-center gap-2 relative">
+                                <img
+                                    src="/Home/az.jpeg"
+                                    alt="Logo"
+                                    className="w-20 h-10 absolute right-20"
+                                />
+                                TechNest
                             </h2>
                             <p className="text-gray-300 mt-5">
-                                Your trusted partner for extraordinary travel experiences since 2015.
+                                Your go-to freelance partner for reliable, custom IT solutions — from websites and mobile apps to cloud services and support. Helping startups and small businesses grow with smart tech since 2015.
                             </p>
                         </div>
 
                         {/* Grid Section */}
                         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 flex-1">
                             {/* Quick Links */}
-                            <div>
+                            <div className='lg:ms-10'>
                                 <h3 className="text-lg font-semibold mb-5">Quick Links</h3>
                                 <ul className="space-y-3 text-gray-300">
                                     {["Home", "About", "Packages", "Contact"].map((item) => (
@@ -81,7 +85,7 @@ const Footer = () => {
 
                     {/* Bottom line */}
                     <div className="mt-12 border-t border-gray-200 pt-4 text-center text-gray-100">
-                        Copyright © 2025 Travel Agency
+                        Copyright © 2025 TechNest
                     </div>
                 </div>
             </footer>

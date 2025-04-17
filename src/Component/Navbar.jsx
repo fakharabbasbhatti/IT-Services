@@ -20,7 +20,7 @@ const Navbar = () => {
           bottom: -4px;
           height: 2px;
           width: 0%;
-          background-color: #0c1c26;
+           background-color: #a17d29; 
           transition: width 0.3s ease-in-out;
         }
 
@@ -29,7 +29,7 @@ const Navbar = () => {
         }
       `}</style>
 
-      <nav className="bg-[#a17d29] py-4">
+      <nav className="bg-white text-[#0c1c26] py-4">
         <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between flex-wrap relative">
           {/* Logo */}
           <div className="flex items-center">
@@ -44,7 +44,7 @@ const Navbar = () => {
           <div className="lg:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-white p-2 rounded-lg focus:outline-none"
+              className="text-[#0c1c26] p-2 rounded-lg focus:outline-none"
             >
               {isOpen ? (
                 <FaTimes className="w-6 h-6" />
@@ -56,9 +56,8 @@ const Navbar = () => {
 
           {/* Navigation Menu */}
           <div
-            className={`w-full lg:flex lg:items-center lg:justify-center lg:w-auto transition-all duration-300 ease-in-out  ${
-              isOpen ? "block mt-4" : "hidden"
-            }`}
+            className={`w-full lg:flex lg:items-center lg:justify-center lg:w-auto transition-all duration-300 ease-in-out  ${isOpen ? "block mt-4" : "hidden"
+              }`}
           >
             {/* Nav Links */}
             <ul className="flex flex-col   items-center text-center lg:flex-row lg:items-start lg:space-x-8 text-[#0c1c26] text-xl font-bold lg:text-center">
@@ -66,7 +65,7 @@ const Navbar = () => {
                 <li key={index}>
                   <a
                     href="#"
-                    className="nav-underline text-[#0c1c26] hover:text-[#0c1c26] transition py-2 px-3"
+                    className="nav-underline  text-[#0c1c26] hover:text-[#a17d29] transition py-2 px-3"
                   >
                     {item}
                   </a>
@@ -76,17 +75,20 @@ const Navbar = () => {
 
             {/* Mobile CTA */}
             <div className="mt-4 lg:hidden flex justify-center">
-            <button className="cursor-pointer flex items-center border border-[#0c1c26] gap-2 bg-[#0c1c26] hover:bg-[#a17d29] transition-all rounded-md text-white px-6 py-3 font-semibold text-sm shadow-md">
-              Plan Your Trip
-            </button>
+              <button className="cursor-pointer  flex items-center  text-[#0c1c26] border-[#a17d29]  bg-[#a17d29] hover:bg-[#0c1c26] transition-all duration-500 rounded-md hover:text-white hover:border-[#a17d29] px-4.5 py-2.5 font-semibold  shadow-md">
+                Plan Your Trip
+              </button>
             </div>
           </div>
 
           {/* Desktop CTA */}
-          <div className="hidden lg:flex items-center">
-            <button className="cursor-pointer flex items-center border border-[#0c1c26] gap-2 bg-[#0c1c26] hover:bg-[#a17d29] transition-all rounded-md text-white px-6 py-3 font-semibold text-sm shadow-md">
-              Plan Your Trip
-            </button>
+          <div className="hidden lg:flex items-center ">
+            <div className="relative group inline-block">
+              <button className="relative z-10 cursor-pointer text-lg flex items-center text-[#0c1c26] border-[#a17d29] border bg-[#a17d29] transition-all duration-500 rounded-md px-5 py-2.5 font-semibold shadow-md overflow-hidden group-hover:text-white">
+                <span className="relative z-10">Plan Your Trip</span>
+                <span className="absolute inset-0 bg-[#0c1c26] w-0 group-hover:w-full transition-all duration-500 ease-in-out  "></span>
+              </button>
+            </div>
           </div>
         </div>
       </nav>
