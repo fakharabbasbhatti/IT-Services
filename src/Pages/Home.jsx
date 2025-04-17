@@ -12,7 +12,7 @@ const Home = () => {
       <Hero />
       <HandpickedPackeg />
       <YourJourney />
-      <ItPopular/>
+      <ItPopular />
       <TopReviews />
       <ReadyAdvanture />
     </div>
