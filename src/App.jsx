@@ -8,7 +8,6 @@ import About from './Pages/About'
 import Services from './Pages/Services'
 import ServiceDetail from "./Component/Services/ServiceDetail"
 import Contact from './Pages/Contact'
-import Team from './Pages/Team';
 import Blog from "./Pages/Blog";
 import Projects from "./Pages/Projects";
 import PageNotFound from './Component/PageNotFound';
@@ -35,7 +34,6 @@ const router = createBrowserRouter([
       { path: "/blogs", element: <Blog /> },
       { path: "/blogs/:id", element: <BlogDetail /> },
       { path: "/projects", element: <Projects /> },
-      { path: "/team", element: <Team /> }
     ],
   },
   { path: "*", element: <PageNotFound /> },

@@ -62,7 +62,7 @@ const Navbar = () => {
           >
             {/* Nav Links */}
             <ul className="flex flex-col   items-center text-center lg:flex-row lg:items-start lg:space-x-8 text-[#0c1c26] text-xl font-bold lg:text-center">
-              {["Home", "Team", "Projects", "Services", "Blogs", "About", "Contact"].map((item, index) => (
+              {["Home", "Projects", "Services", "Blogs", "About", "Contact"].map((item, index) => (
                 <li key={index}>
                   <Link
                     to={item === "Home" ? "/" : `/${item.toLowerCase()}`}

@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./ITServices.css";
+import { MdOutlineArrowCircleRight } from "react-icons/md";
 
 const services = [
     {
@@ -128,15 +129,23 @@ const ITServices = () => {
 
                         <div className="p-6">
                             <h3 className="text-2xl font-semibold text-[#a17d29] mb-2">
-                                {service.title}
+                                {service.title.length > 40 ? `${service.title.substring(0, 40)}...` : service.title}
                             </h3>
-                            <p className="text-white mb-4">{service.description}</p>
+                            <p className="text-white mb-4">
+                                {service.description.length > 100 ? `${service.description.substring(0, 100)}...` : service.description}
+
+                            </p>
                             <Link to={`/services/${service.id}`}>
-                                <button className="relative overflow-hidden group cursor-pointer flex items-center gap-2 bg-[#a17d29] text-white px-6 py-3 font-semibold text-lg shadow-md rounded-md transform-gpu">
-                                    <span className="relative z-10 flex items-center gap-2 bg-transparent">
+                                <button
+                                    className="relative overflow-hidden group cursor-pointer flex items-center gap-2 bg-[#a17d29] text-white px-6 py-3 font-semibold text-lg shadow-md rounded-md transition-all duration-500"
+                                >
+                                    <span className="relative z-10 flex items-center gap-2">
                                         Learn More
+                                        <MdOutlineArrowCircleRight className="text-2xl transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500" />
                                     </span>
-                                    <span className="absolute inset-0 bg-[#0c1c26] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out will-change-transform"></span>
+
+                                    {/* Background hover fill effect */}
+                                    <span className="absolute inset-0 bg-[#0c1c26] w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
                                 </button>
                             </Link>
                         </div>

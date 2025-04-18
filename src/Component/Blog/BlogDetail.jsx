@@ -44,15 +44,23 @@ const BlogDetail = () => {
 
     if (!blog) {
         return (
-            <div className="text-center py-24 text-red-600 font-semibold text-xl">
-                Blog not found.
+            <div className="text-center py-24">
+                <h2 className="text-[#a17d29] font-semibold text-xl">
+                    Blog not found.
+                </h2>
+                <button
+                    onClick={() => navigate("/blogs")}
+                    className="mt-4 px-4 py-2 bg-[#a17d29] hover:cursor-pointer text-white rounded"
+                >
+                    Back to Blogs
+                </button>
             </div>
         );
     }
 
     return (
         <motion.div
-            className="max-w-4xl mx-auto px-4 py-16"
+            className="max-w-full mx-auto px-4 py-16 bg-[#142c38]"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
@@ -65,7 +73,7 @@ const BlogDetail = () => {
             </button>
 
             <motion.h1
-                className="text-4xl font-bold text-[#0c1c26] mb-4"
+                className="text-4xl font-bold text-[#a17d29] mb-4"
                 initial={{ y: -30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -73,7 +81,7 @@ const BlogDetail = () => {
                 {blog.title}
             </motion.h1>
 
-            <p className="text-sm text-gray-500 mb-6">
+            <p className="text-sm text-white mb-6">
                 By {blog.author} • {blog.date}
             </p>
 
@@ -87,7 +95,7 @@ const BlogDetail = () => {
             />
 
             <motion.p
-                className="text-gray-700 leading-relaxed whitespace-pre-line text-lg"
+                className="text-white leading-relaxed whitespace-pre-line text-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.5 }}

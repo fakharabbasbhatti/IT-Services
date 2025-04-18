@@ -67,10 +67,10 @@ const ServiceDetail = () => {
     if (!service) {
         return (
             <div className="text-center py-20">
-                <h2 className="text-2xl font-bold text-red-500">Service not found!</h2>
+                <h2 className="text-2xl font-bold text-[#a17d29]">Service not found!</h2>
                 <button
                     onClick={() => navigate("/services")}
-                    className="mt-4 px-4 py-2 bg-[#a17d29] text-white rounded"
+                    className="mt-4 px-4 py-2 bg-[#a17d29] text-white rounded hover:cursor-pointer"
                 >
                     Back to Services
                 </button>
@@ -80,19 +80,25 @@ const ServiceDetail = () => {
 
     return (
         <motion.div
-            className="max-w-5xl mx-auto px-6 py-16"
+            className="max-w-full mx-auto px-6 py-16 bg-[#142c38]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
         >
+            <button
+                onClick={() => navigate(-1)}
+                className="mb-6 text-[#a17d29] font-semibold hover:underline hover:cursor-pointer"
+            >
+                ← Back to Services
+            </button>
             <img
                 src={service.image}
                 alt={service.title}
                 className="w-full h-64 sm:h-96 object-cover rounded-xl mb-8 shadow-lg"
             />
 
-            <h1 className="text-4xl font-bold text-[#0c1c26] mb-4">{service.title}</h1>
-            <p className="text-lg text-gray-700 leading-relaxed">{service.description}</p>
+            <h1 className="text-4xl font-bold text-[#a17d29] mb-4">{service.title}</h1>
+            <p className="text-lg text-white leading-relaxed">{service.description}</p>
 
             {/* Optional: Add more detail */}
         </motion.div>
