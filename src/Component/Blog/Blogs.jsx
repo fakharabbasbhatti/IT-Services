@@ -9,7 +9,7 @@ const blogs = [
         id: "1",
         title: "The Future of Web Development in 2025",
         summary: "Explore the key trends shaping the web development landscape and how your business can stay ahead.",
-        image: "/Blogs/web.jpg",
+        image: "/Home/p1.jpeg",
         author: "Jane Smith",
         date: "April 10, 2025"
     },
@@ -17,7 +17,7 @@ const blogs = [
         id: "2",
         title: "Why Content Strategy Is Crucial for Digital Success",
         summary: "Learn how effective content strategy drives engagement, SEO, and long-term growth.",
-        image: "/Blogs/content.jpg",
+        image: "/Home/p2.webp",
         author: "John Doe",
         date: "April 12, 2025"
     },
@@ -25,7 +25,7 @@ const blogs = [
         id: "3",
         title: "Top Graphic Design Trends That Boost Conversions",
         summary: "Stay visually competitive with design elements proven to increase user interaction.",
-        image: "/Blogs/graphic.jpg",
+        image: "/Home/p3.webp",
         author: "Emily Chen",
         date: "April 15, 2025"
     }

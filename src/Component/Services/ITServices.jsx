@@ -51,13 +51,13 @@ const services = [
         id: "8",
         title: "Shopify Store Setup",
         description: "Beautiful, functional Shopify stores that convert browsers into buyers.",
-        image: "/Services/shopify.webp",
+        image: "/Home/shopify.jpg",
     },
     {
         id: "9",
         title: "Amazon Store Setup",
         description: "Launch and optimize your brand presence on Amazon with our expertise.",
-        image: "/Services/amazon.webp",
+        image: "/Home/amazon.jpg",
     },
 ];
 

@@ -5,7 +5,7 @@ const Hero = () => {
   return (
     <div className="relative h-[90vh] max-h-[600px] flex justify-center items-center z-10">
       <img
-        src="/Home/hero2.jpg"
+        src="/Contact/bg.jpg"
         alt="Visa Consultancy & Travel Solutions"
         className="w-full h-full "
         loading="lazy"

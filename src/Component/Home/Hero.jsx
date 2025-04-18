@@ -6,9 +6,9 @@ import { useNavigate } from 'react-router-dom';
 const Hero = () => {
   const navigate = useNavigate();
   return (
-    <div className="relative h-[100vh] max-h-[600px] flex justify-center items-center">
+    <div className="relative h-[100vh] max-h-[80vh] flex justify-center items-center">
       <img
-        src="/Home/hero2.jpg"
+        src="/Home/bg.jpg"
         alt="Visa Consultancy & Travel Solutions"
         className="w-full h-full "
         loading="lazy"
