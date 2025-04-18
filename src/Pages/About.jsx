@@ -13,6 +13,7 @@ const About = () => {
       <CustomSection/>
       <EnjoyAble/>
       <OurTeam/>
+    
     </div>
   )
 }
