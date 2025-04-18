@@ -5,6 +5,7 @@ import Navbar from './Component/Navbar'
 import Footer from './Component/Footer'
 import Home from './Pages/Home'
 import About from './Pages/About'
+import TeamDetail from "./Component/About/TeamDetail"
 import Services from './Pages/Services'
 import ServiceDetail from "./Component/Services/ServiceDetail"
 import Contact from './Pages/Contact'
@@ -29,6 +30,7 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Home /> },
       { path: "/about", element: <About /> },
+      { path: "/about/teamdetail/:id", element: <TeamDetail /> },
       { path: "/services", element: <Services /> },
       { path: "/services/:id", element: <ServiceDetail /> },
       { path: "/contact", element: <Contact /> },
