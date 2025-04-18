@@ -3,10 +3,10 @@ import { motion } from "framer-motion";
 import { MdOutlineNavigateNext } from "react-icons/md";
 import { useNavigate } from 'react-router-dom';
 
-const Hero = ({ title, prevRoute, nextRoute }) => {
+const Hero = ({ title, route, prevRoute, nextRoute }) => {
     const navigate = useNavigate();
     return (
-        <div className="relative md:h-[60vh] h-full flex justify-center items-center overflow-hidden">
+        <div className="relative h-[60vh] flex justify-center items-center overflow-hidden">
             {/* Animated Background Image */}
             <motion.img
                 src="/Projects/bg.webp"
@@ -23,10 +23,10 @@ const Hero = ({ title, prevRoute, nextRoute }) => {
 
             {/* Text Content */}
             <div className="absolute flex items-center justify-center w-full z-20 px-4 py-2">
-                <div className="text-white text-center max-w-4xl flex flex-col items-center gap-4">
+                <div className="text-white text-center max-w-4xl flex flex-col items-center">
 
                     <motion.p
-                        className="text-xl font-bold text-[#fff] rounded-full uppercase inline-block px-4 py-2 cursor-pointer transition-colors duration-300"
+                        className="text-xl font-bold text-[#fff] rounded-full inline-block px-4 cursor-pointer transition-colors duration-300"
                         initial={{ opacity: 0, y: -10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.5, delay: 0.1 }}
@@ -36,7 +36,7 @@ const Hero = ({ title, prevRoute, nextRoute }) => {
                     </motion.p>
 
                     <motion.h1
-                        className="w-full mt-4"
+                        className="w-full mt-2"
                         initial={{ opacity: 0, y: -10 }}
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.6, delay: 0.2 }}
@@ -45,7 +45,7 @@ const Hero = ({ title, prevRoute, nextRoute }) => {
                         <div className="flex items-end gap-2 text-lg md:text-xl font-semibold leading-tight text-white">
                             <button onClick={() => navigate("/")} className="hover:text-[#a17d29] transition-colors hover:cursor-pointer">{prevRoute}</button>
                             <MdOutlineNavigateNext className="text-[#a17d29]" />
-                            <button onClick={() => navigate("/projects")} className="text-[#a17d29] hover:cursor-pointer">{nextRoute}</button>
+                            <button onClick={() => navigate(`/${route}`)} className="text-[#a17d29] hover:cursor-pointer">{nextRoute}</button>
                         </div>
 
                     </motion.h1>

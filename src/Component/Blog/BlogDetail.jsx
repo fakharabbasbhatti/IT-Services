@@ -73,7 +73,7 @@ const BlogDetail = () => {
             </button>
 
             <motion.h1
-                className="text-4xl font-bold text-[#a17d29] mb-4"
+                className=",md:text-4xl text-xl font-bold text-[#a17d29] mb-4"
                 initial={{ y: -30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}
@@ -95,7 +95,7 @@ const BlogDetail = () => {
             />
 
             <motion.p
-                className="text-white leading-relaxed whitespace-pre-line text-lg"
+                className="text-white leading-relaxed whitespace-pre-line text-md md:text-lg"
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4, duration: 0.5 }}

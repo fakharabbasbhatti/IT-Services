@@ -1,11 +1,11 @@
 import React from 'react'
-import Hero from '../Component/Blog/Hero'
+import Hero from '../Component/Projects/Hero'
 import Blogs from '../Component/Blog/Blogs'
 
 function Blog() {
     return (
         <div>
-            <Hero />
+            <Hero title={"Our Blogs"} route={"blogs"} prevRoute={"Home"} nextRoute={"Blogs"} />
             <Blogs />
         </div>
     )

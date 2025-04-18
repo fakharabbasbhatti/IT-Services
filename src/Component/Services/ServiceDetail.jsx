@@ -97,8 +97,8 @@ const ServiceDetail = () => {
                 className="w-full h-64 sm:h-96 object-cover rounded-xl mb-8 shadow-lg"
             />
 
-            <h1 className="text-4xl font-bold text-[#a17d29] mb-4">{service.title}</h1>
-            <p className="text-lg text-white leading-relaxed">{service.description}</p>
+            <h1 className="md:text-4xl text-xl font-bold text-[#a17d29] mb-4">{service.title}</h1>
+            <p className="md:text-lg text-md text-white leading-relaxed">{service.description}</p>
 
             {/* Optional: Add more detail */}
         </motion.div>

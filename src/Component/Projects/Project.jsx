@@ -65,7 +65,7 @@ function Project() {
             variants={container}
         >
             <motion.h2
-                className="text-4xl font-bold text-center mb-6 text-[#a17d29]"
+                className="text-xl md:text-4xl font-bold text-center mb-6 text-[#a17d29]"
                 initial={{ opacity: 0, y: -30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6 }}
@@ -74,7 +74,7 @@ function Project() {
             </motion.h2>
 
             <motion.p
-                className="text-center text-lg text-white mb-12 max-w-2xl mx-auto"
+                className="text-center text-md md:text-lg text-white mb-12 max-w-2xl mx-auto"
                 initial={{ opacity: 0, y: -10 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.3, duration: 0.5 }}
