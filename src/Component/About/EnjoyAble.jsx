@@ -3,10 +3,10 @@ import { MdOutlineArrowCircleRight } from "react-icons/md";
 
 // Image data array
 const images = [
-    { src: './about/ab.avif', alt: 'Image 1' },
-    { src: './about/ab2.avif', alt: 'Image 2' },
-    { src: './about/ab4.avif', alt: 'Image 3' },
-    { src: './about/ab3.avif', alt: 'Image 4' },
+    { src: '/about/ab.jpg', alt: 'Image 1' },
+    { src: '/about/ab2.jpg', alt: 'Image 2' },
+    { src: '/about/ab4.jpg', alt: 'Image 3' },
+    { src: '/about/ab3.jpg', alt: 'Image 4' },
 ];
 
 const EnjoyAble = () => {

@@ -8,7 +8,7 @@ export default function YourJourney() {
       {/* Background Image */}
       <div
         className="absolute inset-0 h-full bg-cover bg-center bg-no-repeat z-0"
-        style={{ backgroundImage: "url('/Home/goof.avif')" }}
+        style={{ backgroundImage: "url('/Home/goof.jpg')" }}
       ></div>
       {/* Content */}
       <div className="relative z-20 flex flex-col lg:flex-row items-center justify-between w-full">

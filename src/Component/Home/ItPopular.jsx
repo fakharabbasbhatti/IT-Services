@@ -1,13 +1,13 @@
 import React from "react";
 
 const cardData = [
-  { title: "Web Development", image: "/Home/web.avif" },
-  { title: "Content Writing", image: "/Home/contentW.avif" },
+  { title: "Web Development", image: "/Home/web.jpg" },
+  { title: "Content Writing", image: "/Home/contentW.jpg" },
   { title: "Graphics Designing", image: "/Home/graphics.webp" },
-  { title: "Shopify Store", image: "/Home/shopify.avif" },
-  { title: "Amazon Store", image: "/Home/amazon.avif" },
+  { title: "Shopify Store", image: "/Home/shopify.jpg" },
+  { title: "Amazon Store", image: "/Home/amazon.jpg" },
   { title: "Video Editing", image: "/Home/videoEd.webp" },
-  { title: "Game Development", image: "/Home/Game.avif" },
+  { title: "Game Development", image: "/Home/Game.jpg" },
   { title: "Content Specialist", image: "/Home/contentSp.webp" },
 ];
 
