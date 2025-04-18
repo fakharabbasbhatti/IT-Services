@@ -13,6 +13,7 @@ import Blog from "./Pages/Blog";
 import Projects from "./Pages/Projects";
 import PageNotFound from './Component/PageNotFound';
 import BlogDetail from './Component/Blog/BlogDetail';
+import ProjectDetail from './Component/Projects/ProjectDetail';
 
 
 const MainLayout = () => (
@@ -36,6 +37,7 @@ const router = createBrowserRouter([
       { path: "/blogs", element: <Blog /> },
       { path: "/blogs/:id", element: <BlogDetail /> },
       { path: "/projects", element: <Projects /> },
+      { path: "/projects/:id", element: <ProjectDetail /> },
     ],
   },
   { path: "*", element: <PageNotFound /> },
