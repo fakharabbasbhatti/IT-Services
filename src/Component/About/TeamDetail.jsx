@@ -55,7 +55,7 @@ const TeamDetail = () => {
 
   if (!member) {
     return (
-      <div className="text-center text-red-600 mt-20 text-xl">
+      <div className="text-center font-bold text-[#1e5170] mt-20 text-xl">
         Team member not found.
       </div>
     );
