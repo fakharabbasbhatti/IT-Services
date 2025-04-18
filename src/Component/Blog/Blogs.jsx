@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import "./Blogs.css";
+import { MdOutlineArrowCircleRight } from "react-icons/md";
 
 const blogs = [
     {
@@ -84,7 +85,7 @@ const Blogs = () => {
                             <img
                                 src={blog.image}
                                 alt={blog.title}
-                                className="w-full h-56 object-cover transition-transform duration-300 hover:scale-105 p-2 rounded-2xl"
+                                className="w-full h-56 object-cover transition-transform duration-300"
                             />
 
                         </div>
@@ -97,9 +98,16 @@ const Blogs = () => {
                                 {blog.summary.length > 100 ? `${blog.summary.substring(0, 100)}...` : blog.summary}
                             </p>
                             <Link to={`/blogs/${blog.id}`}>
-                                <button className="relative overflow-hidden group cursor-pointer flex items-center gap-2 bg-[#a17d29] text-white px-6 py-3 font-semibold text-md shadow-md rounded-md transition-all duration-300">
-                                    <span className="relative z-10 bg-transparent">Read More</span>
-                                    <span className="absolute inset-0 bg-[#0c1c26] origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-in-out" />
+                                <button
+                                    className="relative overflow-hidden group cursor-pointer flex items-center gap-2 bg-[#a17d29] text-white px-6 py-3 font-semibold text-lg shadow-md rounded-md transition-all duration-500"
+                                >
+                                    <span className="relative z-10 flex items-center gap-2">
+                                        Read More
+                                        <MdOutlineArrowCircleRight className="text-2xl transform translate-x-6 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500" />
+                                    </span>
+
+                                    {/* Background hover fill effect */}
+                                    <span className="absolute inset-0 bg-[#0c1c26] w-0 group-hover:w-full transition-all duration-500 ease-in-out"></span>
                                 </button>
                             </Link>
                         </div>
