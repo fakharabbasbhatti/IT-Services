@@ -33,13 +33,6 @@ const EnjoyAble = () => {
                 <p className="text-white text-xl mt-5">
                     Business IT solutions help organizations improve their operations through the use of technology. These solutions can include ERP systems, CRM software, data analytics, and cloud services to automate processes and enhance decision-making.
                 </p>
-                <button className="relative overflow-hidden group cursor-pointer flex items-center gap-2 bg-[#a17d29] text-white px-6 py-3 font-semibold text-lg shadow-md rounded-md transition-all duration-500 mt-6 border border-[#a17d29]">
-                    <span className="relative z-10 flex items-center gap-2">
-                        Technical Details
-                        <MdOutlineArrowCircleRight />
-                    </span>
-                    <span className="absolute inset-0 bg-[#0c1c26] w-0 group-hover:w-full transition-all duration-500 ease-in-out "></span>
-                </button>
             </div>
         </section>
     );

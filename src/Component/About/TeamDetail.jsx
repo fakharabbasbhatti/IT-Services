@@ -1,8 +1,9 @@
 import React from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { motion } from "framer-motion";
+import { MdOutlineNavigateNext } from "react-icons/md";
 import { FaTwitter, FaLinkedin, FaInstagram } from "react-icons/fa";
-import { useParams } from "react-router-dom";
 
-// Team members data with social links
 const teamMembers = [
   {
     id: 1,
@@ -42,7 +43,6 @@ const teamMembers = [
   },
 ];
 
-// Icon map with default color
 const iconMap = {
   twitter: <FaTwitter size={28} />,
   linkedin: <FaLinkedin size={28} />,
@@ -51,99 +51,79 @@ const iconMap = {
 
 const TeamDetail = () => {
   const { id } = useParams();
+  const navigate = useNavigate();
   const member = teamMembers.find((m) => m.id === parseInt(id));
 
   if (!member) {
     return (
-      <div className="text-center font-bold text-[#1e5170] mt-20 text-xl">
+      <div className="flex justify-center items-center h-screen bg-[#0c1c26] text-white text-xl">
         Team member not found.
       </div>
     );
   }
 
   return (
-    <>
-      <style>{`
-        .shine-wrapper {
-          position: relative;
-          overflow: hidden;
-          border-radius: 0.5rem;
-        }
-        .shine-wrapper img {
-          display: block;
-          width: 100%;
-          height: auto;
-          object-fit: cover;
-        }
-        .shine-wrapper::after {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: -75%;
-          width: 50%;
-          height: 100%;
-          background: linear-gradient(
-            120deg,
-            rgba(255, 255, 255, 0) 0%,
-            rgba(255, 255, 255, 0.4) 50%,
-            rgba(255, 255, 255, 0) 100%
-          );
-          transform: skewX(-25deg);
-        }
-        .group:hover .shine-wrapper::after {
-          animation: shine-move 1s ease-in-out;
-        }
-        @keyframes shine-move {
-          100% {
-            left: 125%;
-          }
-        }
-      `}</style>
+    <div className="bg-[#0c1c26] text-white min-h-screen px-4 py-12">
+      {/* Breadcrumbs */}
+      <motion.div
+        className="max-w-5xl mx-auto mb-6"
+        initial={{ opacity: 0, y: -20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+      >
+        <div className="flex items-center gap-2 text-sm text-[#a17d29] font-semibold">
+          <button onClick={() => navigate("/")} className="hover:underline hover:cursor-pointer">Home</button>
+          <MdOutlineNavigateNext />
+          <button onClick={() => navigate("/about")} className="hover:underline hover:cursor-pointer">Team</button>
+          <MdOutlineNavigateNext />
+          <span className="text-white">{member.name}</span>
+        </div>
+      </motion.div>
 
-      <div className="mx-auto max-w-7xl px-4">
-        <div className="flex flex-col lg:flex-row mt-16 bg-gradient-to-br from-[#f8f9fa] to-[#eaeff2] overflow-hidden">
-          {/* Image */}
-          <div className="w-full lg:w-1/2 flex items-center justify-center bg-white p-4 group">
-            <div className="shine-wrapper">
-              <img
-                src={member.image}
-                alt={member.name}
-                className="w-[300px] h-[350px] object-cover rounded-xl shadow-xl border-4 border-[#1e5170]"
-              />
-            </div>
-          </div>
+      {/* Team Member Content */}
+      <motion.div
+        className="max-w-5xl mx-auto grid md:grid-cols-2 gap-10 items-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6 }}
+      >
+        <img
+          src={member.image}
+          alt={member.name}
+          className="w-full h-full object-cover rounded-xl shadow-md border border-[#a17d29]"
+        />
+        <div>
+          <h1 className="text-3xl md:text-4xl font-bold text-[#a17d29] mb-2">{member.name}</h1>
+          <h2 className="text-lg font-semibold text-white uppercase tracking-wide">{member.title}</h2>
+          <p className="mt-4 text-lg leading-relaxed text-white">{member.bio}</p>
 
-          {/* Info */}
-          <div className="w-full lg:w-1/2 p-8 lg:p-12 flex flex-col justify-center text-[#1e5170]">
-            <h1 className="text-4xl lg:text-5xl font-extrabold">
-              {member.name}
-            </h1>
-            <h2 className="text-lg font-semibold text-[#a17d29] mt-3 tracking-wide uppercase">
-              {member.title}
-            </h2>
-            <p className="mt-6 text-lg leading-relaxed text-[#374151]">
-              {member.bio}
-            </p>
-
-            {/* Social Icons */}
-            <div className="flex space-x-6 mt-8">
-              {member.socials.slice(0, 3).map((social, index) => (
-                <a
-                  key={index}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  title={social.platform}
-                  className="text-[#1e5170] hover:text-[#a17d29] transition-colors duration-300"
-                >
-                  {iconMap[social.platform]}
-                </a>
-              ))}
-            </div>
+          {/* Social Links */}
+          <div className="flex gap-6 mt-6">
+            {member.socials.map((social, idx) => (
+              <a
+                key={idx}
+                href={social.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-white hover:text-[#a17d29] transition-colors duration-300"
+              >
+                {iconMap[social.platform]}
+              </a>
+            ))}
           </div>
         </div>
+      </motion.div>
+
+      {/* Back Button */}
+      <div className="max-w-5xl mx-auto mt-10 text-center">
+        <button
+          onClick={() => navigate("/about")}
+          className="inline-block text-[#a17d29] hover:text-white border border-[#a17d29] px-6 py-2 rounded-md transition duration-300 hover:cursor-pointer"
+        >
+          ← Back to Team
+        </button>
       </div>
-    </>
+    </div>
   );
 };
 

@@ -73,24 +73,7 @@ const Navbar = () => {
                 </li>
               ))}
             </ul>
-
-            {/* Mobile CTA */}
-            {/* <div className="mt-4 lg:hidden flex justify-center">
-              <button className="cursor-pointer  flex items-center  text-[#0c1c26] border-[#a17d29]  bg-[#a17d29] hover:bg-[#0c1c26] transition-all duration-500 rounded-md hover:text-white hover:border-[#a17d29] px-4.5 py-2.5 font-semibold  shadow-md">
-                Plan Your Trip
-              </button>
-            </div> */}
           </div>
-
-          {/* Desktop CTA */}
-          {/* <div className="hidden lg:flex items-center ">
-            <div className="relative group inline-block">
-              <button className="relative z-10 cursor-pointer text-lg flex items-center text-[#0c1c26] border-[#a17d29] border bg-[#a17d29] transition-all duration-500 rounded-md px-5 py-2.5 font-semibold shadow-md overflow-hidden group-hover:text-white">
-                <span className="relative z-10">Plan Your Trip</span>
-                <span className="absolute inset-0 bg-[#0c1c26] w-0 group-hover:w-full transition-all duration-500 ease-in-out  "></span>
-              </button>
-            </div>
-          </div> */}
         </div>
       </nav>
     </>

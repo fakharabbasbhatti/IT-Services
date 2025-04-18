@@ -1,8 +1,10 @@
 import React from 'react';
 import { MdOutlineArrowCircleRight } from "react-icons/md";
 import { TiTick } from "react-icons/ti";
+import { useNavigate } from 'react-router-dom';
 
 export default function YourJourney() {
+  const navigate = useNavigate();
   return (
     <section className="relative  px-4 md:px-8 py-12 flex items-center justify-center overflow-hidden">
       {/* Background Image */}
@@ -47,19 +49,19 @@ export default function YourJourney() {
 
           {/* Call-to-Action Buttons */}
           <div className="flex flex-wrap justify-center lg:justify-start gap-4 pt-4">
-  {/* Learn More Button */}
-  <button className="relative overflow-hidden group flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white border border-[#a17d29] rounded-md shadow-md transition-all duration-500 ease-in-out">
-    <span className="relative z-10 group-hover:text-[#0c1c26] transition-colors duration-300">Learn more</span>
-    <MdOutlineArrowCircleRight className="relative z-10 group-hover:text-[#0c1c26] transition-colors duration-300" />
-    <span className="absolute inset-0 w-0 group-hover:w-full bg-[#a17d29] transition-all duration-500 ease-in-out"></span>
-  </button>
+            {/* Learn More Button */}
+            <button className="relative overflow-hidden group flex items-center gap-2 px-6 py-3 text-lg font-semibold text-white border border-[#a17d29] rounded-md shadow-md transition-all duration-500 ease-in-out hover:cursor-pointer" onClick={() => navigate("/services")}>
+              <span className="relative z-10 group-hover:text-[#0c1c26] transition-colors duration-300">Learn more</span>
+              <MdOutlineArrowCircleRight className="relative z-10 group-hover:text-[#0c1c26] transition-colors duration-300" />
+              <span className="absolute inset-0 w-0 group-hover:w-full bg-[#a17d29] transition-all duration-500 ease-in-out"></span>
+            </button>
 
-  {/* Contact Us Button */}
-  <button className="relative overflow-hidden group px-6 py-3 text-lg font-semibold text-white border border-[#a17d29] rounded-md transition-all duration-500 ease-in-out">
-    <span className="relative z-10 group-hover:text-[#0c1c26] transition-colors duration-300">Contact Us</span>
-    <span className="absolute inset-0 w-0 group-hover:w-full bg-[#a17d29] transition-all duration-500 ease-in-out"></span>
-  </button>
-</div>
+            {/* Contact Us Button */}
+            <button className="relative overflow-hidden group px-6 py-3 text-lg font-semibold text-white border border-[#a17d29] rounded-md transition-all duration-500 ease-in-out hover:cursor-pointer" onClick={() => navigate("/contact")}>
+              <span className="relative z-10 group-hover:text-[#0c1c26] transition-colors duration-300">Contact Us</span>
+              <span className="absolute inset-0 w-0 group-hover:w-full bg-[#a17d29] transition-all duration-500 ease-in-out"></span>
+            </button>
+          </div>
 
 
           {/* Guide Info */}

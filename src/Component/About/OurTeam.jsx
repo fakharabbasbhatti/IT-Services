@@ -35,15 +35,14 @@ const OurTeam = () => {
       </p>
 
       <h2 className="text-3xl md:text-5xl font-bold mb-10">
-      Meet IT Solutions Team
+        Meet IT Solutions Team
       </h2>
-      <div className="flex flex-wrap justify-center gap-8 px-4" >
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
         {packages.map((item, index) => (
           <div
             key={index}
-            className="w-[400px] rounded-[30px] overflow-hidden hover:scale-105 transition-transform duration-300"
+            className="rounded-[30px] overflow-hidden hover:scale-105 transition-transform duration-300 cursor-pointer"
             onClick={() => navigate(`/about/teamdetail/${item.id}`)}
-
           >
             {/* Image with Shine Effect */}
             <div className="shine-effect">
@@ -54,19 +53,15 @@ const OurTeam = () => {
               />
             </div>
 
-            {/* fot section with rounded corners */}
-              <div className="text-center mt-6">
-                <h2 className="text-3xl font-bold text-[#0c1c26]">
-                  {item.name}
-                </h2>
-                <p className="text-lg font-medium text-gray-600">
-                  {item.founder}
-                </p>
-                </div>
-             </div>
-          
+            {/* Footer section */}
+            <div className="text-center mt-6">
+              <h2 className="text-3xl font-bold text-[#0c1c26]">{item.name}</h2>
+              <p className="text-lg font-medium text-gray-600">{item.founder}</p>
+            </div>
+          </div>
         ))}
       </div>
+
 
       {/* Shine Effect CSS */}
       <style>{`

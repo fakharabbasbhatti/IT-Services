@@ -72,28 +72,28 @@ const StatCard = ({ title, count, suffix, icon, bg }) => {
   }, [count, hasAnimated]);
 
   return (
-<div
-  ref={ref}
-  className="group flex flex-col items-center text-center md:items-start md:text-left space-y-3"
->
-  <div
-    className={`w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-full ${bg} transition-transform duration-500 group-hover:rotate-[360deg]`}
-  >
-    {icon}
-  </div>
-  <div className="text-white text-base sm:text-lg font-medium">{title}</div>
-  <div className="text-3xl sm:text-4xl font-bold text-[#a17d29]">
-    {currentCount}
-    {suffix}
-  </div>
-</div>
+    <div
+      ref={ref}
+      className="group flex flex-col items-center text-center md:items-start md:text-left space-y-3"
+    >
+      <div
+        className={`w-16 h-16 sm:w-20 sm:h-20 flex items-center justify-center rounded-full ${bg} transition-transform duration-500 group-hover:rotate-[360deg] mx-auto`}
+      >
+        {icon}
+      </div>
+      <div className="text-white text-base text-[10px] sm:text-lg font-medium mx-auto">{title}</div>
+      <div className="text-[10px] sm:text-2xl font-bold text-[#a17d29] mx-auto">
+        {currentCount}
+        {suffix}
+      </div>
+    </div>
   );
 };
 
 const ClientRivew = () => {
   return (
     <div className="bg-[#0c1c26] max-w-7xl mx-auto py-12 px-6 sm:px-8 lg:px-16 md:rounded-3xl mt-0 md:mt-10">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
+      <div className="flex md:justify-between justify-center items-center flex-wrap gap-10">
         {statsData.map((stat) => (
           <StatCard
             key={stat.id}
