@@ -14,13 +14,17 @@ import Projects from "./Pages/Projects";
 import PageNotFound from './Component/PageNotFound';
 import BlogDetail from './Component/Blog/BlogDetail';
 import ProjectDetail from './Component/Projects/ProjectDetail';
+import ScrollToTop from './Component/ScrollToTop';
+import ScrollToTopButton from './Component/ScrollToTopButton';
 
 
 const MainLayout = () => (
   <div className="lg:mx-auto lg:max-w-[1536px]">
+    <ScrollToTop />
     <Navbar />
     <Outlet />
     <Footer />
+    <ScrollToTopButton />
   </div>
 );
 

@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Hero = ({ title, route, prevRoute, nextRoute }) => {
     const navigate = useNavigate();
     return (
-        <div className="relative h-[60vh] flex justify-center items-center overflow-hidden">
+        <div className="relative h-[50vh] md:h-[60vh] flex justify-center items-center overflow-hidden">
             {/* Animated Background Image */}
             <motion.img
                 src="/Projects/bg.webp"

@@ -27,7 +27,7 @@ const ItPopular = () => {
             Join us as we transform businesses through innovative technology, one solution at a time.
           </p>
           <button className="relative overflow-hidden group px-7 py-3 w-fit border-2 border-[#a17d29] cursor-pointer font-medium text-sm md:text-xl rounded-md flex items-center gap-2 text-white transition duration-500 ease-in-out hover:cursor-pointer" onClick={() => navigate("/services")}>
-            <span className="relative z-10 group-hover:text-[#0c1c26] transition duration-300">Find Packages</span>
+            <span className="relative z-10 group-hover:text-[#0c1c26] transition duration-300">Find Services</span>
             <span className="absolute inset-0 w-0 group-hover:w-full bg-[#a17d29] transition-all duration-500 ease-in-out"></span>
           </button>
 

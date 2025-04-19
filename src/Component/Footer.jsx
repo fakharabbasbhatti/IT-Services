@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaPhoneAlt, FaEnvelope, FaInstagram, FaTwitter, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 
 const Footer = () => {
@@ -30,12 +31,14 @@ const Footer = () => {
                             <div className='lg:ms-10'>
                                 <h3 className="text-lg font-semibold mb-5">Quick Links</h3>
                                 <ul className="space-y-3 text-gray-300">
-                                    {["Home", "About", "Packages", "Contact"].map((item) => (
+                                    {["Home", "Projects", "Services", "Blogs", "About", "Contact"].map((item) => (
                                         <li
                                             key={item}
                                             className="transition-all duration-200 hover:text-[#a17d29] hover:scale-105"
                                         >
-                                            <a href="#">{item}</a>
+                                            <Link to={item === "Home" ? "/" : `/${item.toLowerCase()}`}>
+                                                {item}
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>

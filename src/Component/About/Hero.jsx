@@ -10,7 +10,7 @@ const Hero = () => {
         loading="lazy"
       />
       <div className="absolute inset-0 bg-black/60 flex flex-col justify-center items-center text-center px-4">
-        <p className="text-sm bg-[#1e5170] text-white hover:bg-[#000000] rounded-full font-light uppercase inline-block px-4 py-2 cursor-pointer">
+        <p className="text-sm bg-[#a17d29] text-white hover:bg-[#0c1c26] rounded-full font-light uppercase inline-block px-4 py-2 cursor-pointer">
             About us
           </p>
         <h1 className="text-white text-xl md:text-4xl font-bold leading-tight max-w-3xl mt-4 md:mt-10">

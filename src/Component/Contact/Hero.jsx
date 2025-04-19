@@ -15,7 +15,7 @@ const Hero = () => {
           <p className="text-sm bg-[#a17d29] text-white hover:bg-[#0c1c26] rounded-full font-light uppercase inline-block px-4 py-2 cursor-pointer">
             Say Hello to New Destinations
           </p>
-          <h1 className="text-3xl md:text-7xl font-bold leading-tight">
+          <h1 className="text-xl md:text-5xl font-bold leading-tight">
             Ready to Explore? <br /> Contact Us!
           </h1>
           <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base font-light pt-4">

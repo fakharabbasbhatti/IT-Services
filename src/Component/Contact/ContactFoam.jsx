@@ -32,7 +32,7 @@ const ContactFoam = () => {
     };
 
     return (
-        <div className="bg-white rounded-t-[60px] px-6 md:px-12 py-12 md:py-20 max-w-7xl mx-auto shadow-lg mt-[-6rem] relative z-100">
+        <div className="bg-white rounded-t-[60px] px-6 md:px-12 py-12 md:py-20 max-w-7xl mx-auto shadow-lg md:mt-[-6rem] mt-[-2rem] relative z-100">
             <div className="grid md:grid-cols-2 gap-y-4 items-center">
                 {/* Contact Form */}
                 <form className="space-y-6 max-md:order-2" onSubmit={handleSubmit}>

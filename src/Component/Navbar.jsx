@@ -1,13 +1,23 @@
 import React, { useState } from "react";
 import { FaBars, FaTimes } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [closing, setClosing] = useState(false);
+
+  const handleMobileLinkClick = () => {
+    if (window.innerWidth < 1024) {
+      setClosing(true);
+      setTimeout(() => {
+        setIsOpen(false);
+        setClosing(false);
+      }, 300);
+    }
+  };
 
   return (
     <>
-      {/* Inline styles for hover effect */}
       <style>{`
         .nav-underline {
           position: relative;
@@ -21,12 +31,16 @@ const Navbar = () => {
           bottom: -4px;
           height: 2px;
           width: 0%;
-           background-color: #a17d29; 
+          background-color: #a17d29;
           transition: width 0.3s ease-in-out;
         }
 
         .nav-underline:hover::after {
           width: 100%;
+        }
+
+        .active-link {
+          color: #a17d29 !important;
         }
       `}</style>
 
@@ -34,11 +48,7 @@ const Navbar = () => {
         <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between flex-wrap relative">
           {/* Logo */}
           <div className="flex items-center">
-            <img
-              src="/logobg.png"
-              alt="Logo"
-              className="w-28 h-26 absolute"
-            />
+            <img src="/logobg.png" alt="Logo" className="w-28 h-26 absolute" />
           </div>
 
           {/* Mobile Menu Button */}
@@ -47,29 +57,28 @@ const Navbar = () => {
               onClick={() => setIsOpen(!isOpen)}
               className="text-[#0c1c26] p-2 rounded-lg focus:outline-none"
             >
-              {isOpen ? (
-                <FaTimes className="w-6 h-6" />
-              ) : (
-                <FaBars className="w-6 h-6" />
-              )}
+              {isOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
             </button>
           </div>
 
           {/* Navigation Menu */}
           <div
-            className={`w-full lg:flex lg:items-center lg:justify-center lg:w-auto transition-all duration-300 ease-in-out  ${isOpen ? "block mt-4" : "hidden"
-              }`}
+            className={`w-full lg:flex lg:items-center lg:justify-center lg:w-auto transition-all duration-300 ease-in-out ${isOpen ? "block mt-4" : "hidden"
+              } ${closing ? "menu-animation menu-animation-hide" : "menu-animation"}`}
           >
-            {/* Nav Links */}
-            <ul className="flex flex-col   items-center text-center lg:flex-row lg:items-start lg:space-x-8 text-[#0c1c26] text-xl font-bold lg:text-center">
+            <ul className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:space-x-8 text-[#0c1c26] text-xl font-bold lg:text-center">
               {["Home", "Projects", "Services", "Blogs", "About", "Contact"].map((item, index) => (
                 <li key={index}>
-                  <Link
+                  <NavLink
                     to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className="nav-underline  text-[#0c1c26] hover:text-[#a17d29] transition py-2 px-3"
+                    className={({ isActive }) =>
+                      `nav-underline transition py-2 px-3 ${isActive ? "active-link" : "text-[#0c1c26] hover:text-[#a17d29]"
+                      }`
+                    }
+                    onClick={handleMobileLinkClick}
                   >
                     {item}
-                  </Link>
+                  </NavLink>
                 </li>
               ))}
             </ul>
