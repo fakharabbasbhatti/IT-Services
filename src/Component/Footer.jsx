@@ -12,11 +12,11 @@ const Footer = () => {
                     <div className="flex flex-col lg:flex-row justify-between gap-10">
                         {/* Logo and Description */}
                         <div className="lg:max-w-sm ">
-                            <h2 className="text-4xl font-bold mb-2 flex items-center gap-2 relative">
+                            <h2 className="text-xl md:text-4xl font-bold mb-2 flex items-center gap-2 relative">
                                 <img
                                     src="/Home/az.jpeg"
                                     alt="Logo"
-                                    className="w-20 h-10 absolute right-20"
+                                    className="w-16 h-8 md:w-20 md:h-10 absolute right-20"
                                 />
                                 TechNest
                             </h2>

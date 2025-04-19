@@ -11,7 +11,7 @@ const blogPosts = [
 Progressive Web Apps (PWAs) are gaining traction as they provide app-like functionality without needing downloads. Meanwhile, frameworks like Next.js, Astro, and Remix are pushing performance boundaries.
 
 By investing in a scalable and modern tech stack, your business stays competitive and prepared for the digital future.`,
-        image: "/Blogs/web.jpg",
+        image: "/Home/p1.jpeg",
         author: "Jane Smith",
         date: "April 10, 2025"
     },
@@ -21,7 +21,7 @@ By investing in a scalable and modern tech stack, your business stays competitiv
         content: `Content strategy is more than just planning blog posts. It involves understanding your audience, creating content for each stage of the funnel, and ensuring SEO best practices.
 
 Great content builds trust, boosts conversions, and supports every part of your customer journey. Whether you're launching a startup or scaling your ecommerce brand, a solid content plan is non-negotiable in 2025.`,
-        image: "/Blogs/content.jpg",
+        image: "/Home/p2.webp",
         author: "John Doe",
         date: "April 12, 2025"
     },
@@ -31,7 +31,7 @@ Great content builds trust, boosts conversions, and supports every part of your 
         content: `Design isn't just about aesthetics—it's about results. In 2025, minimalism, dynamic gradients, and animated visuals dominate the landscape. These trends help brands tell stories visually and improve user experience.
 
 Designs that adapt to dark mode, incorporate motion, and use storytelling techniques are proven to keep visitors engaged and convert more leads.`,
-        image: "/Blogs/graphic.jpg",
+        image: "/Home/p3.webp",
         author: "Emily Chen",
         date: "April 15, 2025"
     }
