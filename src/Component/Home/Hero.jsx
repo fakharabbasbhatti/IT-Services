@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom';
 const Hero = () => {
   const navigate = useNavigate();
   return (
-    <div className="relative h-[100vh] max-h-[80vh] flex justify-center items-center">
+    <div className="relative h-[80vh] md:h-[100vh] max-h-[80vh] flex justify-center items-center">
       <img
         src="/Home/bg.jpg"
         alt="Visa Consultancy & Travel Solutions"
@@ -15,10 +15,10 @@ const Hero = () => {
       />
       <div className="absolute inset-0 bg-black/50 flex items-center px-4">
         <div className="text-white text-left max-w-4xl space-y-4 ml-4 md:ml-16">
-          <p className="text-sm bg-[#0c1c26] text-white hover:bg-[#a17d29] rounded-full font-light uppercase inline-block px-4 py-2 cursor-pointer">
+          <p className="text-[10px] md:text-sm bg-[#0c1c26] text-white hover:bg-[#a17d29] rounded-full font-light uppercase inline-block px-4 py-2 cursor-pointer">
             Experience IT Services
           </p>
-          <h1 className="text-xl md:text-5xl font-bold leading-tight w-full md:w-[60%]">
+          <h1 className="text-md md:text-5xl font-bold leading-tight w-full md:w-[60%]">
             Experience IT Services Like Never Before
           </h1>
           <p className="text-[15px] md:text-xl font-light w-full md:w-[70%]">

@@ -29,12 +29,12 @@ const OurTeam = () => {
   const navigate = useNavigate();
   return (
     <div className="py-16 bg-white text-center">
-      <p className="relative overflow-hidden group text-sm text-white cursor-pointer font-light uppercase inline-block px-8 py-2 mb-2 rounded-full bg-[#a17d29] transition-all duration-500 ease-in-out transform hover:scale-105 shadow-md">
+      <p className="relative overflow-hidden group text-[10px] md:text-sm text-white cursor-pointer font-light uppercase inline-block px-8 py-2 mb-2 rounded-full bg-[#a17d29] transition-all duration-500 ease-in-out transform hover:scale-105 shadow-md">
         <span className="relative z-10">Our Team</span>
         <span className="absolute inset-0 bg-gradient-to-r from-[#0c1c26] via-[#1a1a1a] to-[#0c1c26] w-0 group-hover:w-full transition-all duration-500 ease-in-out rounded-full"></span>
       </p>
 
-      <h2 className="text-3xl md:text-5xl font-bold mb-10">
+      <h2 className="text-xl md:text-5xl font-bold mb-10">
         Meet IT Solutions Team
       </h2>
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 px-4">

@@ -26,11 +26,11 @@ const EnjoyAble = () => {
 
             {/* Right Side */}
             <div className="flex-1 flex flex-col items-start mt:6 md:mt-14 ">
-                <button className="text-sm hover:bg-[#0c1c26] border border-[#a17d29]  text-white bg-[#a17d29] rounded-full font-light uppercase inline-block px-4 py-2 cursor-pointer">
+                <button className="text-[10px] md:text-sm hover:bg-[#0c1c26] border border-[#a17d29]  text-white bg-[#a17d29] rounded-full font-light uppercase inline-block px-4 py-2 cursor-pointer">
                     Market Data
                 </button>
-                <h2 className="text-4xl text-[#a17d29] font-bold mt-5">Business IT Solutions</h2>
-                <p className="text-white text-xl mt-5">
+                <h2 className="text-xl md:text-2xl lg:text-4xl text-[#a17d29] font-bold mt-5">Business IT Solutions</h2>
+                <p className="text-white text-sm lg:text-xl mt-5">
                     Business IT solutions help organizations improve their operations through the use of technology. These solutions can include ERP systems, CRM software, data analytics, and cloud services to automate processes and enhance decision-making.
                 </p>
             </div>

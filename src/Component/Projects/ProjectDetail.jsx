@@ -64,7 +64,7 @@ const ProjectDetail = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5 }}
             >
-                <div className="flex items-center gap-2 text-sm text-[#a17d29] font-semibold">
+                <div className="flex items-center gap-2 text-[10px] md:text-sm text-[#a17d29] font-semibold">
                     <button onClick={() => navigate("/")} className="hover:underline hover:cursor-pointer">Home</button>
                     <MdOutlineNavigateNext />
                     <button onClick={() => navigate("/projects")} className="hover:underline hover:cursor-pointer">Projects</button>
@@ -86,8 +86,8 @@ const ProjectDetail = () => {
                     className="w-full h-full object-cover rounded-xl shadow-md border border-[#a17d29]"
                 />
                 <div>
-                    <h1 className="text-3xl md:text-4xl font-bold text-[#a17d29] mb-4">{project.title}</h1>
-                    <p className="text-lg text-white leading-relaxed">{project.description}</p>
+                    <h1 className="text-xl md:text-4xl font-bold text-[#a17d29] mb-4">{project.title}</h1>
+                    <p className="text-[15px] md:text-lg text-white leading-relaxed">{project.description}</p>
                 </div>
             </motion.div>
 
@@ -95,7 +95,7 @@ const ProjectDetail = () => {
             <div className="max-w-5xl mx-auto mt-10 text-center">
                 <button
                     onClick={() => navigate("/projects")}
-                    className="inline-block text-[#a17d29] hover:text-white border border-[#a17d29] px-6 py-2 rounded-md transition duration-300 hover:cursor-pointer"
+                    className="inline-block text-[#a17d29] hover:text-white border border-[#a17d29] md:px-6 md:py-2 px-3 py-1 rounded-md transition duration-300 hover:cursor-pointer"
                 >
                     ← Back to Projects
                 </button>
