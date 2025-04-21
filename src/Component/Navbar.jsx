@@ -44,7 +44,7 @@ const Navbar = () => {
         }
       `}</style>
 
-      <nav className="bg-white text-[#0c1c26] py-4">
+      <nav className="bg-white text-[#0c1c26] py-4 sticky top-0 z-200">
         <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between flex-wrap relative">
           {/* Logo */}
           <div className="flex items-center">
