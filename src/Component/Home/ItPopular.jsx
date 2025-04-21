@@ -4,9 +4,9 @@ import { useNavigate } from "react-router-dom";
 const cardData = [
   { title: "Web Development", image: "/Home/web.jpg" },
   { title: "Content Writing", image: "/Home/contentW.jpg" },
-  { title: "Graphics Designing", image: "/Home/graphics.webp" },
-  { title: "Shopify Store", image: "/Home/shopify.jpg" },
-  { title: "Amazon Store", image: "/Home/amazon.jpg" },
+  { title: "Graphics Designing", image: "/Services/graphic.jpg" },
+  { title: "Shopify Store", image: "/Services/shopify.jpg" },
+  { title: "Amazon Store", image: "/Services/amazon.jpg" },
   { title: "Video Editing", image: "/Home/videoEd.webp" },
   { title: "Game Development", image: "/Home/Game.jpg" },
   { title: "Content Specialist", image: "/Home/contentSp.webp" },

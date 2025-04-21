@@ -27,7 +27,7 @@ const services = [
         id: "4",
         title: "Graphic Design",
         description: "Eye-catching graphics and brand visuals to make you stand out.",
-        image: "/Services/graphics.webp",
+        image: "/Services/graphic.jpg",
     },
     {
         id: "5",
@@ -51,13 +51,13 @@ const services = [
         id: "8",
         title: "Shopify Store Setup",
         description: "Beautiful, functional Shopify stores that convert browsers into buyers.",
-        image: "/Home/shopify.jpg",
+        image: "/Services/shopify.jpg",
     },
     {
         id: "9",
         title: "Amazon Store Setup",
         description: "Launch and optimize your brand presence on Amazon with our expertise.",
-        image: "/Home/amazon.jpg",
+        image: "/Services/amazon.jpg",
     },
 ];
 
