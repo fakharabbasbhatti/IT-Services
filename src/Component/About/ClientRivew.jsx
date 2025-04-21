@@ -82,7 +82,7 @@ const StatCard = ({ title, count, suffix, icon, bg }) => {
         {icon}
       </div>
       <div className="text-white text-base text-[10px] sm:text-lg font-medium mx-auto">{title}</div>
-      <div className="text-[10px] sm:text-2xl font-bold text-[#a17d29] mx-auto">
+      <div className="text-[15px] sm:text-2xl font-bold text-[#a17d29] mx-auto">
         {currentCount}
         {suffix}
       </div>
