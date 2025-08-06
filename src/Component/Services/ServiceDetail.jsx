@@ -57,6 +57,24 @@ const services = [
         description: "Launch and optimize your brand presence on Amazon with our expertise.",
         image: "/Services/amazon.jpg",
     },
+    {
+        id: "10",
+        title: "SEO Optimization",
+        description: "Amazon launch, brand optimization, expert strategy, presence boost.",
+        image: "/Services/seo.jpg",
+    },
+    {
+        id: "11",
+        title: "Mobile App Development",
+        description: "Design, develop, launch, optimize, mobile apps, iOS, Android, expert solutions.",
+        image: "/Services/app.jpg",
+    },
+    {
+        id: "12",
+        title: "UI/UX Design",
+        description: "Launch, optimize, brand presence, user interface, user experience, expert design, seamless flow.",
+        image: "/Services/uiux.jpg",
+    },
 ];
 
 const ServiceDetail = () => {

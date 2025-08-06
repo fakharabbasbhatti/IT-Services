@@ -1,92 +1,88 @@
-import React, { useState } from "react";
-import { FaBars, FaTimes } from "react-icons/fa";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [closing, setClosing] = useState(false);
-
-  const handleMobileLinkClick = () => {
-    if (window.innerWidth < 1024) {
-      setClosing(true);
-      setTimeout(() => {
-        setIsOpen(false);
-        setClosing(false);
-      }, 300);
-    }
-  };
 
   return (
-    <>
-      <style>{`
-        .nav-underline {
-          position: relative;
-          display: inline-block;
-        }
+    <nav className="shadow-md p-3">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16 items-center">
 
-        .nav-underline::after {
-          content: '';
-          position: absolute;
-          left: 0;
-          bottom: -4px;
-          height: 2px;
-          width: 0%;
-          background-color: #a17d29;
-          transition: width 0.3s ease-in-out;
-        }
-
-        .nav-underline:hover::after {
-          width: 100%;
-        }
-
-        .active-link {
-          color: #a17d29 !important;
-        }
-      `}</style>
-
-      <nav className="bg-white text-[#0c1c26] py-4">
-        <div className="max-w-screen-xl mx-auto px-4 flex items-center justify-between flex-wrap relative">
-          {/* Logo */}
-          <div className="flex items-center">
-            <img src="/logobg.png" alt="Logo" className="w-28 h-26 absolute" />
+          {/* Left: Logo */}
+          <div className="flex-shrink-0">
+            <img
+              className="w-20 sm:w-28 h-auto"
+              src="/logobg.png"
+              alt="Logo"
+            />
           </div>
+          {/* Center: Headings */}
+          <div className="hidden md:flex space-x-12 mx-auto">
+            {[
+              { label: "Home", to: "/" },
+              { label: "About", to: "/about" },
+              { label: "Blogs", to: "/blogs" },
+              { label: "Services", to: "/services" },
+              { label: "Projects", to: "/projects" },
+              { label: "Contact", to: "/contact" },
+            ].map((item) => (
+              <Link
+                key={item.to}
+                to={item.to}
+                className="relative group text-[#0c1c26] hover:text-[#a17d29] text-xl font-bold"
+              >
+                {item.label}
+                <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#a17d29] transition-all duration-300 group-hover:w-full"></span>
+              </Link>
+            ))}
+          </div>
+
+
+          {/* Right: Empty */}
+          <div className="hidden md:block w-10"></div>
 
           {/* Mobile Menu Button */}
-          <div className="lg:hidden">
+          <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-[#0c1c26] p-2 rounded-lg focus:outline-none"
+              className="text-[#0c1c26] hover:text-[#a17d29] text-3xl focus:outline-none"
             >
-              {isOpen ? <FaTimes className="w-6 h-6" /> : <FaBars className="w-6 h-6" />}
+              ☰
             </button>
           </div>
-
-          {/* Navigation Menu */}
-          <div
-            className={`w-full lg:flex lg:items-center lg:justify-center lg:w-auto transition-all duration-300 ease-in-out ${isOpen ? "block mt-4" : "hidden"
-              } ${closing ? "menu-animation menu-animation-hide" : "menu-animation"}`}
-          >
-            <ul className="flex flex-col items-center text-center lg:flex-row lg:items-start lg:space-x-8 text-[#0c1c26] text-xl font-bold lg:text-center">
-              {["Home", "Projects", "Services", "Blogs", "About", "Contact"].map((item, index) => (
-                <li key={index}>
-                  <NavLink
-                    to={item === "Home" ? "/" : `/${item.toLowerCase()}`}
-                    className={({ isActive }) =>
-                      `nav-underline transition py-2 px-3 ${isActive ? "active-link" : "text-[#0c1c26] hover:text-[#a17d29]"
-                      }`
-                    }
-                    onClick={handleMobileLinkClick}
-                  >
-                    {item}
-                  </NavLink>
-                </li>
-              ))}
-            </ul>
-          </div>
         </div>
-      </nav>
-    </>
-  );
-};
+      </div>
 
-export default Navbar;
+      {/* Mobile Menu */}
+      {isOpen && (
+        <div className="md:hidden px-4 pb-4 space-y-4 mt-5 flex flex-col items-center">
+          <Link to="/" className="relative group text-[#0c1c26] hover:text-[#a17d29] text-xl font-bold">
+            Home
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#a17d29] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link to="/about" className="relative group text-[#0c1c26] hover:text-[#a17d29] text-xl font-bold">
+            About
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#a17d29] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link to="/blogs" className="relative group text-[#0c1c26] hover:text-[#a17d29] text-xl font-bold">
+            Blogs
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#a17d29] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link to="/services" className="relative group text-[#0c1c26] hover:text-[#a17d29] text-xl font-bold">
+            Services
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#a17d29] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link to="/projects" className="relative group text-[#0c1c26] hover:text-[#a17d29] text-xl font-bold">
+            Projects
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#a17d29] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+          <Link to="/contact" className="relative group text-[#0c1c26] hover:text-[#a17d29] text-xl font-bold">
+            Contact
+            <span className="absolute left-0 -bottom-1 w-0 h-[2px] bg-[#a17d29] transition-all duration-300 group-hover:w-full"></span>
+          </Link>
+        </div>
+      )}
+    </nav>
+  );
+}

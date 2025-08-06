@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams, useNavigate } from "react-router-dom";
-import { motion } from "framer-motion";
+import { motion } from "framer-motion"; // <-- You forgot to import this
 
 const blogPosts = [
     {
@@ -73,7 +73,7 @@ const BlogDetail = () => {
             </button>
 
             <motion.h1
-                className=",md:text-4xl text-xl font-bold text-[#a17d29] mb-4"
+                className="md:text-4xl text-xl font-bold text-[#a17d29] mb-4"
                 initial={{ y: -30, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.5 }}

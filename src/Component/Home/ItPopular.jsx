@@ -10,6 +10,9 @@ const cardData = [
   { title: "Video Editing", image: "/Home/videoEd.webp" },
   { title: "Game Development", image: "/Home/Game.jpg" },
   { title: "Content Specialist", image: "/Home/contentSp.webp" },
+  { title: "SEO Optimization", image: "/Services/seo.jpg" },
+  { title: "Mobile App Development", image: "/Services/app.jpg" },
+  { title: "UI/UX Design", image: "/Services/uiux.jpg" },
 ];
 
 const ItPopular = () => {
