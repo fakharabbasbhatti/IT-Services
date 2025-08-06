@@ -20,7 +20,7 @@ export default function YourJourney() {
             Explore the World
           </span>
 
-          <h1 className="text-3xl sm:text-4xl font-bold text-white leading-snug">
+          <h1 className="text-xl sm:text-4xl font-bold text-white leading-snug">
             IT Solutions for Modern Businesses
           </h1>
 

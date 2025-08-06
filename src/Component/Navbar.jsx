@@ -38,6 +38,9 @@ export default function Navbar() {
             ))}
           </div>
 
+          {/* Right: Empty */}
+          <div className="hidden md:block w-10"></div>
+
 
           {/* Right: Empty */}
           <div className="hidden md:block w-10"></div>
