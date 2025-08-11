@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaPhoneAlt, FaEnvelope, FaInstagram, FaTwitter, FaLinkedin, FaFacebook } from 'react-icons/fa';
+import { FaPhoneAlt, FaEnvelope, FaInstagram, FaTwitter, FaLinkedin, FaFacebook ,FaMapMarkerAlt } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
 
@@ -69,20 +69,29 @@ const Footer = () => {
                             </div>
 
                             {/* Contact */}
-                            <div>
-                                <h3 className="text-lg font-semibold mb-5">Contact</h3>
-                                <p className="text-gray-300">
-                                    M City Ampang <br /> office no 201 Selangor
-                                </p>
-                                <div className="mt-3 flex items-center gap-2 text-orange-400 hover:text-white transition duration-200">
-                                    <FaPhoneAlt className="hover:text-orange-400 transition" />
-                                    <span className="text-gray-300">+601128246982</span>
-                                </div>
-                                <div className="mt-2 flex items-center gap-2 text-orange-400 hover:text-white transition duration-200">
-                                    <FaEnvelope className="hover:text-orange-400 transition" />
-                                    <span className="text-gray-300">example@gmail.com</span>
-                                </div>
-                            </div>
+                           <div>
+  <h3 className="text-lg font-semibold mb-5">Contact</h3>
+
+  {/* Address */}
+  <div className="mt-3 flex items-center gap-2 text-orange-400 hover:text-white transition duration-200">
+    <FaMapMarkerAlt className="hover:text-orange-400 transition sm:-mt-5" />
+    <span className="text-gray-300 hover:underline">
+      Tiara Ampang, Selangor Kuala Lumpur 
+    </span>
+  </div>
+
+  {/* Phone */}
+  <div className="mt-3 flex items-center gap-2 text-orange-400 hover:text-white transition duration-200">
+    <FaPhoneAlt className="hover:text-orange-400 transition" />
+    <span className="text-gray-300 hover:underline">+601128246982</span>
+  </div>
+
+  {/* Email */}
+  <div className="mt-2 flex items-center gap-2 text-orange-400 hover:text-white transition duration-200">
+    <FaEnvelope className="hover:text-orange-400 transition" />
+    <span className="text-gray-300 hover:underline">jawaidh82@gmail.com</span>
+  </div>
+</div>
                         </div>
                     </div>
 
